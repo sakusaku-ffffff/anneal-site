@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>プライバシーポリシー — Anneal</title>
+<meta name="description" content="タスク管理アプリ Anneal のプライバシーポリシー。データは利用者の管理下にのみ保存され、開発者は受け取りません。 / Privacy Policy for Anneal, a desktop task manager.">
+<meta name="robots" content="index,follow">
+<style>
+:root{
+  --bg:#F4F6F8; --surface:#FFFFFF; --line:#D7DCE2; --line-soft:#E4E8ED;
+  --hi:#171B21; --mid:#4E5865; --lo:#828D9B; --acc:#0E8996; --acc-soft:#E4F4F6;
+  --f-ui:"Yu Gothic UI","BIZ UDPGothic","Segoe UI Variable Text","Segoe UI",Meiryo,
+         system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
+  --f-mono:"Cascadia Mono",Consolas,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#15181D; --surface:#1B1F26; --line:#2B323C; --line-soft:#232830;
+    --hi:#E6EAEF; --mid:#A7B1BE; --lo:#6B7684; --acc:#35B8C7; --acc-soft:#163034;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--hi);
+  font-family:var(--f-ui); font-size:16px; line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px; margin:0 auto; padding:0 24px 96px}
+header{padding:56px 0 0}
+.mark{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:13px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--acc); font-weight:700;
+}
+.mark svg{display:block}
+h1{font-size:30px; line-height:1.4; margin:18px 0 10px; letter-spacing:.01em}
+.sub{color:var(--mid); font-size:14px; margin:0}
+.langbar{
+  margin:26px 0 0; padding:12px 16px; border:1px solid var(--line);
+  border-radius:10px; background:var(--surface); font-size:14px;
+}
+.langbar a{margin-right:14px}
+hr{border:0; border-top:1px solid var(--line); margin:44px 0}
+h2{
+  font-size:20px; margin:52px 0 14px; padding-top:8px; line-height:1.5;
+  border-top:1px solid var(--line-soft);
+}
+h2:first-of-type{border-top:0}
+h3{font-size:16px; margin:30px 0 8px}
+p,li{color:var(--hi)}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 16px; padding-left:1.35em}
+li{margin:0 0 7px}
+a{color:var(--acc); text-decoration:underline; text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+code{
+  font-family:var(--f-mono); font-size:.88em; background:var(--surface);
+  border:1px solid var(--line-soft); border-radius:5px; padding:1px 6px;
+  word-break:break-all;
+}
+.lead{
+  background:var(--surface); border:1px solid var(--line);
+  border-left:3px solid var(--acc); border-radius:10px;
+  padding:20px 24px; margin:32px 0 8px;
+}
+.lead ul{margin:0; padding-left:1.2em}
+.lead li{margin:0 0 8px}
+.lead li:last-child{margin:0}
+.tablewrap{overflow-x:auto; margin:0 0 18px; -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse; width:100%; min-width:520px; font-size:14.5px}
+th,td{border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top}
+th{background:var(--acc-soft); font-weight:700; white-space:nowrap}
+td code{background:transparent; border:0; padding:0}
+.note{color:var(--mid); font-size:14px}
+footer{margin-top:64px; padding-top:22px; border-top:1px solid var(--line); color:var(--lo); font-size:13.5px}
+:target{scroll-margin-top:24px}
+@media (max-width:600px){
+  body{font-size:15.5px}
+  .wrap{padding:0 18px 72px}
+  h1{font-size:25px}
+  h2{font-size:18.5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="mark">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="15" height="15" rx="4" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M5.4 9.2l2.5 2.5 4.7-5.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Anneal
+  </span>
+  <h1>プライバシーポリシー<br><span style="font-size:.62em;color:var(--mid);font-weight:600">Privacy Policy</span></h1>
+  <p class="sub">最終更新日：2026年8月7日　/　Last updated: August 7, 2026</p>
+
+  <nav class="langbar">
+    <a href="#ja">日本語</a><a href="#en">English</a>
+  </nav>
+</header>
+
+<!-- ======================= 日本語 ======================= -->
+<main id="ja">
+
+<div class="lead">
+  <ul>
+    <li>Anneal は Windows 上で動くタスク管理アプリです。データは<strong>利用者の管理下にある場所（このPC・利用者が指定したフォルダやNAS・利用者自身の Google ドライブ）にのみ</strong>保存されます。</li>
+    <li><strong>開発者はサーバーを運用しておらず、利用者のデータを一切受け取りません。</strong>アカウント登録もありません。</li>
+    <li>アクセス解析・行動追跡・広告・クラッシュレポートの送信は<strong>ありません</strong>。</li>
+    <li>アプリが外部と通信するのは、利用者が Google ドライブ連携を有効にしたときの <strong>Google のエンドポイントのみ</strong>です。</li>
+  </ul>
+</div>
+
+<h2 id="ja-1">1. 適用範囲</h2>
+<p>このポリシーは、デスクトップ用タスク管理アプリケーション <strong>Anneal</strong>（Windows 版）と、同梱される AI 連携用サーバー（MCP サーバー）に適用されます。開発者は個人であり、以下「開発者」と表記します。</p>
+
+<h2 id="ja-2">2. 開発者が受け取る情報</h2>
+<p><strong>ありません。</strong></p>
+<p>Anneal は完全にローカルで動作するアプリケーションです。開発者はバックエンドサーバー、データベース、解析基盤のいずれも運用していません。したがって、タスクの内容、利用状況、端末情報などが開発者に送信されることはありません。利用のためのアカウント作成やログインも不要です。</p>
+<p>例外は、利用者が自らの意思で下記「14. 連絡先」のメールアドレスへ連絡した場合のみです。そのときは、そのメールに書かれた内容とメールアドレスを、返信のためだけに使用します。</p>
+
+<h2 id="ja-3">3. アプリが扱う情報</h2>
+<p>以下は<strong>すべて利用者の端末および利用者が選んだ保存先の中だけ</strong>で扱われます。</p>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>種類</th><th>内容</th><th>保存先</th><th>他の端末と同期</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>タスクとプロジェクト</td>
+      <td>タスク名、メモ本文、期日、優先度、タグ、完了状態、プロジェクト名と並び順</td>
+      <td>このPC（必ず）＋設定していれば保存先</td>
+      <td>する</td>
+    </tr>
+    <tr>
+      <td>設定</td>
+      <td>デバイスID、保存先の場所、既定のタグ</td>
+      <td>このPC（<code>%USERPROFILE%\.anneal\config.json</code>）</td>
+      <td>しない</td>
+    </tr>
+    <tr>
+      <td>プロジェクト資料</td>
+      <td>利用者が登録した、このPC上のフォルダ／ファイルのパス（1プロジェクト5件まで）</td>
+      <td>このPC（<code>project-files.json</code>）</td>
+      <td>しない</td>
+    </tr>
+    <tr>
+      <td>Google の更新トークン</td>
+      <td>Google ドライブ連携を有効にした場合のみ。暗号化して保管（下記 5.）</td>
+      <td>このPC（<code>%USERPROFILE%\.anneal\token.bin</code>）</td>
+      <td>しない</td>
+    </tr>
+    <tr>
+      <td>デバイスID</td>
+      <td>端末を区別するための16進8桁の値。Windows の MachineGuid を一方向に畳んで算出します</td>
+      <td>このPC＋保存先のファイル名（例 <code>dev-587e5b17.json</code>）</td>
+      <td>ファイル名として現れる</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="note">デバイスIDは、複数の端末が同じ保存先へ書き込んでも互いを壊さないようにするためだけに使います。外部へ送信されることはなく、開発者がこれを受け取ることもありません。</p>
+<p>Anneal は氏名、住所、電話番号、生年月日、支払い情報などの入力欄を持たず、これらを求めません。メモ欄は自由記述のため利用者が何を書くかは自由ですが、書かれた内容も上表と同じ場所にしか保存されません。</p>
+
+<h2 id="ja-4">4. データの保存先</h2>
+<ol>
+  <li><strong>このPC（常に）</strong>— <code>%USERPROFILE%\.anneal\</code> の下に保存します。保存先を設定していない場合はここだけです。</li>
+  <li><strong>利用者が指定したフォルダ／NAS（任意）</strong> — 指定した場所の <code>Anneal\devices\</code> に同じ内容を書きます。</li>
+  <li><strong>利用者自身の Google ドライブ（任意）</strong> — マイドライブ内の <code>Anneal</code> フォルダに書きます。</li>
+</ol>
+<p>いずれも利用者自身が管理する場所です。開発者はこれらにアクセスできません。</p>
+
+<h2 id="ja-5">5. Google アカウントとの連携（任意機能）</h2>
+<p>Google ドライブを保存先として使う場合にのみ、Google アカウントへの接続を行います。使わなければこの節は一切適用されません。</p>
+
+<h3>求める権限</h3>
+<p><code>https://www.googleapis.com/auth/drive.file</code> の<strong>1つだけ</strong>です。これは「このアプリが作成・オープンした Google ドライブ上のファイルの表示と管理」に限定された権限で、<strong>Anneal から見えるのは Anneal 自身が作ったファイルだけ</strong>です。利用者が Google ドライブに置いている他のファイル、フォルダ、写真、文書は、Anneal からは存在しないものとして扱われ、読むことも書くこともできません。ドライブ全体へのアクセス権（<code>drive</code>）や読み取り権（<code>drive.readonly</code>）は要求しません。</p>
+
+<h3>使いみち</h3>
+<p>マイドライブ内の <code>Anneal</code> フォルダに、端末ごとの同期ファイル（<code>dev-*.json</code>）を作成・読み取り・更新することだけに使います。他の目的には使いません。</p>
+
+<h3>Google から取得する情報</h3>
+<p>アクセストークンと更新トークンのみです。氏名、メールアドレス、プロフィール画像、連絡先などのアカウント情報は要求せず、取得しません。</p>
+
+<h3>共有・転送について</h3>
+<p>Google API から得た情報を、開発者を含むいかなる第三者にも<strong>送信・提供・販売しません</strong>。広告、プロファイリング、機械学習モデルの学習には<strong>一切利用しません</strong>。</p>
+<p>Anneal による Google API からの情報の使用および他アプリへの転送は、<a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>（Limited Use requirements を含む）に準拠します。</p>
+
+<h3>トークンの保管</h3>
+<p>更新トークンは、Windows のデータ保護 API（DPAPI, CurrentUser スコープ）で暗号化したうえで <code>%USERPROFILE%\.anneal\token.bin</code> に保存します。<strong>同じ Windows ユーザーとして同じ端末にログインしているときにだけ復号できます。</strong>ファイルを他の端末へ持ち出しても復号できません。このファイルは同期の対象外で、保存先（NAS や Google ドライブ）へ送られることはありません。</p>
+
+<h3>認証のしかた</h3>
+<p>Google のログイン画面は<strong>利用者の既定のブラウザ</strong>で開きます。<strong>Anneal が Google アカウントのパスワードを受け取ることはありません。</strong>認可コードの受け渡しには PKCE（S256）を用い、応答は端末内のループバックアドレス（<code>http://127.0.0.1</code>）でのみ受け取ります。</p>
+
+<h3>連携の解除とデータの削除</h3>
+<ul>
+  <li>アプリのホーム →「設定」→ 接続の解除。このとき Google 側へも取り消し（revoke）を送り、<code>token.bin</code> を削除します。</li>
+  <li><a href="https://myaccount.google.com/permissions" rel="noopener">Google アカウントのアクセス権限ページ</a>からも、いつでもアクセスを取り消せます。</li>
+  <li>Google ドライブ上のデータは、マイドライブの <code>Anneal</code> フォルダを削除すれば消えます。</li>
+</ul>
+
+<h2 id="ja-6">6. 通信</h2>
+<p>Anneal が接続する先は次のとおりです。<strong>これ以外の宛先へは接続しません。</strong></p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>接続先</th><th>目的</th><th>いつ</th></tr></thead>
+  <tbody>
+    <tr><td><code>accounts.google.com</code></td><td>Google の同意画面の表示</td><td rowspan="3">Google ドライブ連携を有効にしている間だけ</td></tr>
+    <tr><td><code>oauth2.googleapis.com</code></td><td>トークンの取得・更新・取り消し</td></tr>
+    <tr><td><code>www.googleapis.com</code></td><td>Google ドライブ API（同期ファイルの読み書き）</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>Google ドライブ連携を使わない場合、Anneal は外部と一切通信しません。</strong>更新確認や利用状況の送信も行いません。</p>
+<p class="note">Windows および Windows 同梱の WebView2 コンポーネント自体が行う通信は Microsoft の管理下にあり、その取り扱いは Microsoft のプライバシーに関する声明に従います。</p>
+
+<h2 id="ja-7">7. AI 連携（MCP サーバー）を有効にした場合</h2>
+<p>Anneal には、AI アシスタントにタスクを渡して実行させるための連携機能（MCP サーバー）が付属します。<strong>これは任意の機能で、既定では無効です。</strong>利用者が「AI連携を追加」を実行したときにのみ登録されます。</p>
+<p>有効にすると、利用者が設定した AI クライアント（Claude Code、デスクトップ版 Claude など）が、この端末上で標準入出力を通じてタスクの一覧・内容・メモ・登録済みの資料パスを読み書きできるようになります。この受け渡しは<strong>端末内で完結</strong>し、Anneal がそれを外部へ送ることはありません。</p>
+<p>ただし、<strong>AI クライアントは受け取った内容を、その提供者のサーバーへ送信する場合があります。</strong>その取り扱いは各 AI 提供者のプライバシーポリシーに従います。連携が不要な場合は「AI連携を外す」で解除できます。</p>
+
+<h2 id="ja-8">8. 収集・送信しないもの</h2>
+<p>Anneal は次のいずれも行いません。</p>
+<ul>
+  <li>アクセス解析・利用状況の計測・行動追跡</li>
+  <li>広告の表示、広告ID の取得、第三者トラッカーの読み込み</li>
+  <li>クラッシュレポートやテレメトリの送信</li>
+  <li>位置情報、連絡先、カレンダー、カメラ、マイク、通話履歴の取得</li>
+  <li>端末を横断して個人を識別するための情報の収集</li>
+  <li>Google ドライブ連携時を除く、あらゆる外部への自動通信</li>
+</ul>
+
+<h2 id="ja-9">9. 第三者への提供</h2>
+<p>開発者は利用者のデータを保持していないため、<strong>第三者に提供・共有・販売することはありません。</strong>法令に基づく開示請求を受けた場合も、開発者の手元に開示できるデータは存在しません。</p>
+
+<h2 id="ja-10">10. 保存期間と削除の方法</h2>
+<p>データは利用者が削除するまで保存され続けます。開発者側での保存期間という概念はありません。</p>
+<ul>
+  <li><strong>このPC</strong> — アプリをアンインストールしても <code>%USERPROFILE%\.anneal\</code> は残ります（再インストール時に内容を失わないようにするためです）。完全に消すには、このフォルダを手動で削除してください。旧バージョンから移行した場合は <code>%USERPROFILE%\.rack\</code> も残っていることがあります。</li>
+  <li><strong>指定フォルダ／NAS</strong> — その場所の <code>Anneal</code> フォルダを削除してください。</li>
+  <li><strong>Google ドライブ</strong> — マイドライブの <code>Anneal</code> フォルダを削除し、連携を解除してください（上記 5.）。</li>
+</ul>
+
+<h2 id="ja-11">11. 安全対策</h2>
+<ul>
+  <li>Google の更新トークンは DPAPI（CurrentUser）で暗号化して保存し、平文では保持しません。</li>
+  <li>Google の権限は <code>drive.file</code> に限定し、必要最小限にとどめています。</li>
+  <li>認証は既定のブラウザ上の Google の画面で行い、アプリはパスワードを扱いません。</li>
+  <li>認可コードの交換には PKCE（S256）を用い、応答はループバックアドレスでのみ受け取ります。</li>
+  <li>配布する実行ファイルにはコード署名を施しています。</li>
+</ul>
+<p class="note">なお、端末そのものへの物理的なアクセスや、端末上の他のソフトウェアによる操作までは防げません。端末には Windows のログインパスワードを設定し、必要に応じてディスクの暗号化（BitLocker など）をご利用ください。</p>
+
+<h2 id="ja-12">12. 子どもの利用について</h2>
+<p>Anneal は 13 歳未満の子どもを対象とした製品ではなく、子どもから個人情報を意図的に収集することはありません。そもそも開発者はいかなる利用者の情報も収集していません。</p>
+
+<h2 id="ja-13">13. このポリシーの変更</h2>
+<p>内容を変更する場合は、このページを更新し、冒頭の「最終更新日」を改めます。重要な変更がある場合は、アプリの配布物に含まれる説明でもお知らせします。</p>
+
+<h2 id="ja-14">14. 連絡先</h2>
+<p>このポリシーや Anneal のデータの取り扱いについてのお問い合わせは、次のメールアドレスへお願いします。</p>
+<p><a href="mailto:osoraman.v2@gmail.com">osoraman.v2@gmail.com</a></p>
+
+</main>
+
+<hr>
+
+<!-- ======================= English ======================= -->
+<main id="en" lang="en">
+
+<h1 style="font-size:26px;margin:0 0 6px">Privacy Policy (English)</h1>
+<p class="sub" style="margin-bottom:8px">Last updated: August 7, 2026. This English text is a translation of the Japanese original above; in case of any discrepancy, the Japanese text prevails.</p>
+
+<div class="lead">
+  <ul>
+    <li>Anneal is a desktop task manager for Windows. Your data is stored <strong>only in locations you control</strong>: your own PC, a folder or NAS you choose, and — if you enable it — your own Google Drive.</li>
+    <li><strong>The developer operates no server and receives none of your data.</strong> No account or sign-up is required to use Anneal.</li>
+    <li>There is <strong>no analytics, tracking, advertising, or crash reporting</strong> of any kind.</li>
+    <li>The only network destinations Anneal ever contacts are <strong>Google's endpoints</strong>, and only while you have Google Drive sync enabled.</li>
+  </ul>
+</div>
+
+<h2 id="en-1">1. Scope</h2>
+<p>This policy applies to the <strong>Anneal</strong> desktop task management application for Windows and to the bundled AI integration server (MCP server). Anneal is developed and published by an individual developer, referred to below as "the developer."</p>
+
+<h2 id="en-2">2. Information the developer receives</h2>
+<p><strong>None.</strong></p>
+<p>Anneal runs entirely on your device. The developer operates no backend server, no database, and no analytics infrastructure. Your tasks, your usage, and your device information are never transmitted to the developer. No account creation or sign-in is required.</p>
+<p>The only exception is if you choose to email the address in section 14. In that case, the contents of your message and your email address are used solely to reply to you.</p>
+
+<h2 id="en-3">3. Information the app handles</h2>
+<p>All of the following stays on your device and in the storage location you choose.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Type</th><th>Contents</th><th>Stored in</th><th>Synced to other devices</th></tr></thead>
+  <tbody>
+    <tr><td>Tasks and projects</td><td>Task titles, note text, due dates, priorities, tags, completion state, project names and order</td><td>Your PC (always) plus your chosen storage location, if configured</td><td>Yes</td></tr>
+    <tr><td>Settings</td><td>Device ID, storage location, default tags</td><td>Your PC (<code>%USERPROFILE%\.anneal\config.json</code>)</td><td>No</td></tr>
+    <tr><td>Project files list</td><td>Paths to folders/files on your PC that you register (up to 5 per project)</td><td>Your PC (<code>project-files.json</code>)</td><td>No</td></tr>
+    <tr><td>Google refresh token</td><td>Only if you enable Google Drive sync. Stored encrypted (see section 5)</td><td>Your PC (<code>%USERPROFILE%\.anneal\token.bin</code>)</td><td>No</td></tr>
+    <tr><td>Device ID</td><td>An 8-character hexadecimal value used to tell your devices apart, derived by a one-way fold of the Windows MachineGuid</td><td>Your PC and as a file name in your storage location (e.g. <code>dev-587e5b17.json</code>)</td><td>Appears as a file name</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">The device ID exists only so that several devices writing to the same storage location do not overwrite one another. It is never transmitted off your device and the developer never receives it.</p>
+<p>Anneal has no fields for and never asks for your name, address, phone number, date of birth, or payment information. Note fields accept free text, so their contents are up to you; whatever you write is stored only in the locations listed above.</p>
+
+<h2 id="en-4">4. Where data is stored</h2>
+<ol>
+  <li><strong>Your PC (always)</strong> — under <code>%USERPROFILE%\.anneal\</code>. If you configure no other location, this is the only place.</li>
+  <li><strong>A folder or NAS you choose (optional)</strong> — the same content is written to <code>Anneal\devices\</code> in that location.</li>
+  <li><strong>Your own Google Drive (optional)</strong> — written to an <code>Anneal</code> folder in your My Drive.</li>
+</ol>
+<p>All of these are under your control. The developer cannot access any of them.</p>
+
+<h2 id="en-5">5. Google account integration (optional)</h2>
+<p>Anneal connects to a Google account only if you choose to use Google Drive as your storage location. If you do not, nothing in this section applies.</p>
+
+<h3>Scope requested</h3>
+<p>A single scope: <code>https://www.googleapis.com/auth/drive.file</code>. This grants access only to files the app itself creates or that you explicitly open with it. <strong>Anneal can see only the files it created.</strong> Everything else in your Google Drive — your other files, folders, photos, and documents — is invisible to Anneal and cannot be read or modified by it. Anneal does not request full Drive access (<code>drive</code>) or read-only Drive access (<code>drive.readonly</code>).</p>
+
+<h3>How it is used</h3>
+<p>Solely to create, read, and update per-device sync files (<code>dev-*.json</code>) inside an <code>Anneal</code> folder in your My Drive. It is used for no other purpose.</p>
+
+<h3>What is obtained from Google</h3>
+<p>An access token and a refresh token only. Anneal does not request or receive your name, email address, profile picture, contacts, or any other account information.</p>
+
+<h3>Sharing and transfer</h3>
+<p>Information obtained from Google APIs is <strong>never transmitted, disclosed, or sold to any third party, including the developer</strong>. It is <strong>never</strong> used for advertising, profiling, or training machine learning models.</p>
+<p>Anneal's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h3>Token storage</h3>
+<p>The refresh token is encrypted with the Windows Data Protection API (DPAPI, CurrentUser scope) and stored at <code>%USERPROFILE%\.anneal\token.bin</code>. <strong>It can be decrypted only while signed in as the same Windows user on the same device.</strong> Copying the file to another machine renders it undecryptable. This file is excluded from sync and is never written to your NAS or Google Drive.</p>
+
+<h3>How authentication works</h3>
+<p>The Google sign-in screen opens in <strong>your default browser</strong>. <strong>Anneal never sees your Google password.</strong> The authorization code exchange uses PKCE (S256), and the response is accepted only on a loopback address on your own machine (<code>http://127.0.0.1</code>).</p>
+
+<h3>Revoking access and deleting data</h3>
+<ul>
+  <li>In the app: Home → Settings → disconnect. This sends a revocation request to Google and deletes <code>token.bin</code>.</li>
+  <li>You can also revoke access at any time from your <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account permissions page</a>.</li>
+  <li>To delete the data stored in Drive, delete the <code>Anneal</code> folder in your My Drive.</li>
+</ul>
+
+<h2 id="en-6">6. Network connections</h2>
+<p>Anneal connects to the following destinations and <strong>to no others</strong>.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Destination</th><th>Purpose</th><th>When</th></tr></thead>
+  <tbody>
+    <tr><td><code>accounts.google.com</code></td><td>Displaying Google's consent screen</td><td rowspan="3">Only while Google Drive sync is enabled</td></tr>
+    <tr><td><code>oauth2.googleapis.com</code></td><td>Obtaining, refreshing, and revoking tokens</td></tr>
+    <tr><td><code>www.googleapis.com</code></td><td>Google Drive API (reading and writing sync files)</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>If you do not use Google Drive sync, Anneal makes no network connections at all.</strong> It performs no update checks and sends no usage data.</p>
+<p class="note">Network activity performed by Windows itself or by the bundled WebView2 component is controlled by Microsoft and governed by the Microsoft Privacy Statement.</p>
+
+<h2 id="en-7">7. If you enable the AI integration (MCP server)</h2>
+<p>Anneal ships with an optional integration (an MCP server) that lets an AI assistant read and act on your tasks. <strong>It is disabled by default</strong> and is registered only when you run the "add AI integration" script yourself.</p>
+<p>Once enabled, the AI client you configure (such as Claude Code or the Claude desktop app) can read and write your task list, task contents, notes, and registered project file paths through standard input/output on your machine. This exchange stays <strong>entirely on your device</strong>; Anneal does not send it anywhere.</p>
+<p>However, <strong>the AI client may transmit what it receives to its own provider's servers.</strong> That handling is governed by that provider's privacy policy, not by this one. You can remove the integration at any time with the "remove AI integration" script.</p>
+
+<h2 id="en-8">8. What Anneal does not do</h2>
+<ul>
+  <li>No analytics, usage measurement, or behavioral tracking</li>
+  <li>No advertising, advertising identifiers, or third-party trackers</li>
+  <li>No crash reporting or telemetry</li>
+  <li>No access to location, contacts, calendar, camera, microphone, or call history</li>
+  <li>No collection of information used to identify you across devices or services</li>
+  <li>No automatic network communication of any kind other than the Google Drive integration described above</li>
+</ul>
+
+<h2 id="en-9">9. Disclosure to third parties</h2>
+<p>Because the developer holds none of your data, it is <strong>never disclosed, shared, or sold to third parties</strong>. If the developer were to receive a lawful request for user data, there would be no user data in the developer's possession to produce.</p>
+
+<h2 id="en-10">10. Retention and deletion</h2>
+<p>Data is kept until you delete it. There is no developer-side retention period because there is no developer-side copy.</p>
+<ul>
+  <li><strong>Your PC</strong> — uninstalling the app leaves <code>%USERPROFILE%\.anneal\</code> in place, so that reinstalling does not lose your data. To remove it completely, delete that folder manually. If you migrated from an earlier version, <code>%USERPROFILE%\.rack\</code> may also remain.</li>
+  <li><strong>Folder or NAS</strong> — delete the <code>Anneal</code> folder in that location.</li>
+  <li><strong>Google Drive</strong> — delete the <code>Anneal</code> folder in your My Drive and disconnect the integration (see section 5).</li>
+</ul>
+
+<h2 id="en-11">11. Security measures</h2>
+<ul>
+  <li>The Google refresh token is encrypted at rest with DPAPI (CurrentUser) and is never stored in plain text.</li>
+  <li>Google access is limited to the <code>drive.file</code> scope — the minimum required.</li>
+  <li>Authentication happens on Google's own page in your default browser; the app never handles your password.</li>
+  <li>The authorization code exchange uses PKCE (S256) and is accepted only on a loopback address.</li>
+  <li>Distributed executables are code-signed.</li>
+</ul>
+<p class="note">These measures cannot protect against physical access to your device or against other software running on it. Please set a Windows sign-in password and consider enabling disk encryption such as BitLocker.</p>
+
+<h2 id="en-12">12. Children</h2>
+<p>Anneal is not directed to children under 13 and does not knowingly collect personal information from children. The developer collects no information from any user.</p>
+
+<h2 id="en-13">13. Changes to this policy</h2>
+<p>If this policy changes, this page will be updated and the "last updated" date at the top will be revised. Significant changes will also be noted in the documentation included with the app.</p>
+
+<h2 id="en-14">14. Contact</h2>
+<p>For questions about this policy or about how Anneal handles data, please contact:</p>
+<p><a href="mailto:osoraman.v2@gmail.com">osoraman.v2@gmail.com</a></p>
+
+</main>
+
+<footer>
+  Anneal — タスク管理アプリ / desktop task manager for Windows<br>
+  © 2026 Anneal. 最終更新日 2026年8月7日 / Last updated August 7, 2026.
+</footer>
+
+</div>
+</body>
+</html>
