@@ -96,7 +96,7 @@ footer{margin-top:64px; padding-top:22px; border-top:1px solid var(--line); colo
     Anneal
   </span>
   <h1>プライバシーポリシー<br><span style="font-size:.62em;color:var(--mid);font-weight:600">Privacy Policy</span></h1>
-  <p class="sub">最終更新日：2026年8月8日　/　Last updated: August 8, 2026</p>
+  <p class="sub">最終更新日：2026年8月18日　/　Last updated: August 18, 2026</p>
   <p class="sub" style="margin-top:8px">
     このポリシーは日本語版を正文とし、英語版との間に相違がある場合は日本語版が優先します。<br>
     <span lang="en">The Japanese version is authoritative; in case of any discrepancy, it prevails over the English version.</span>
@@ -112,19 +112,25 @@ footer{margin-top:64px; padding-top:22px; border-top:1px solid var(--line); colo
 
 <div class="lead">
   <ul>
-    <li>Anneal は Windows 上で動くタスク管理アプリです。データは<strong>利用者の管理下にある場所（このPC・利用者が指定したフォルダやNAS・利用者自身の Google ドライブ）にのみ</strong>保存されます。</li>
-    <li><strong>開発者はサーバーを運用しておらず、利用者のデータを一切受け取りません。</strong>アカウント登録もありません。</li>
+    <li>Anneal には Windows 用のデスクトップ版と、ブラウザ版（iOS などのブラウザ、およびホーム画面に追加した Web アプリ）があります。データは<strong>利用者の管理下にある場所（このPC・このブラウザ・利用者が指定したフォルダやNAS・利用者自身の Google ドライブ）にのみ</strong>保存されます。</li>
+    <li><strong>開発者は利用者のデータを一切受け取りません。</strong>デスクトップ版は完全にローカルで動きます。ブラウザ版でのみ、Google との鍵交換のための中継を1つ運用しますが、<strong>そこを通るのは認可コードとトークンだけ</strong>で、タスクの内容・件数・利用状況は通りません。アカウント登録もありません。</li>
     <li>アクセス解析・行動追跡・広告・クラッシュレポートの送信は<strong>ありません</strong>。</li>
-    <li>アプリが外部と通信するのは、利用者が Google ドライブ連携を有効にしたときの <strong>Google のエンドポイントのみ</strong>です。</li>
+    <li>アプリが外部と通信するのは、利用者が Google ドライブ連携を有効にしたときの <strong>Google のエンドポイント</strong>と、ブラウザ版でのみ使う<strong>上記の中継</strong>だけです。</li>
   </ul>
 </div>
 
 <h2 id="ja-1">1. 適用範囲</h2>
-<p>このポリシーは、デスクトップ用タスク管理アプリケーション <strong>Anneal</strong>（Windows 版）と、同梱される AI 連携用サーバー（MCP サーバー）に適用されます。開発者は個人であり、以下「開発者」と表記します。</p>
+<p>このポリシーは、タスク管理アプリケーション <strong>Anneal</strong>（Windows 用デスクトップ版およびブラウザ版）と、同梱される AI 連携用サーバー（MCP サーバー）、およびブラウザ版の認証で使う中継エンドポイントに適用されます。開発者は個人であり、以下「開発者」と表記します。</p>
 
 <h2 id="ja-2">2. 開発者が受け取る情報</h2>
 <p><strong>ありません。</strong></p>
-<p>Anneal は完全にローカルで動作するアプリケーションです。開発者はバックエンドサーバー、データベース、解析基盤のいずれも運用していません。したがって、タスクの内容、利用状況、端末情報などが開発者に送信されることはありません。利用のためのアカウント作成やログインも不要です。</p>
+<p>Anneal のデスクトップ版（Windows）は完全にローカルで動作します。開発者はデータベースも解析基盤も運用しておらず、タスクの内容、利用状況、端末情報などが開発者に送信されることはありません。利用のためのアカウント作成やログインも不要です。</p>
+<p><strong>ブラウザ版でのみ、開発者は中継用のエンドポイントを1つ運用します。</strong>Google の Web アプリ型クライアントは、認可コードをトークンに交換する際に <code>client_secret</code> を要求し、これはブラウザに置けないためです。何が通り、何を保管しないかは次のとおりです。</p>
+<ul>
+  <li>通るのは<strong>認可コードとトークンだけ</strong>です。タスクの内容・件数・利用状況・端末情報は通りません。Google ドライブの読み書きは、利用者のブラウザから Google へ直接行われます。</li>
+  <li>更新トークンは<strong>利用者のブラウザの Cookie（HttpOnly）に置き</strong>、開発者側には保管しません。この中継はデータベースも保存領域も持ちません。</li>
+  <li>認可コード・トークン・Cookie の中身は<strong>記録に出しません</strong>。ただし、配信基盤（Cloudflare）側には、アクセス日時・IPアドレス・応答状態といった通信の実行記録が一定期間残ります。これは配信基盤の運用上のもので、これを通じて開発者がタスクの内容を受け取ることはありません。</li>
+</ul>
 <p>例外は、利用者が自らの意思で下記「14. 連絡先」のメールアドレスへ連絡した場合のみです。そのときは、そのメールに書かれた内容とメールアドレスを、返信のためだけに使用します。</p>
 
 <h2 id="ja-3">3. アプリが扱う情報</h2>
@@ -281,23 +287,29 @@ footer{margin-top:64px; padding-top:22px; border-top:1px solid var(--line); colo
 <main id="en" lang="en">
 
 <h1 style="font-size:26px;margin:0 0 6px">Privacy Policy (English)</h1>
-<p class="sub" style="margin-bottom:8px">Last updated: August 8, 2026. This English text is a translation of the Japanese original above; in case of any discrepancy, the Japanese text prevails.</p>
+<p class="sub" style="margin-bottom:8px">Last updated: August 18, 2026. This English text is a translation of the Japanese original above; in case of any discrepancy, the Japanese text prevails.</p>
 
 <div class="lead">
   <ul>
-    <li>Anneal is a desktop task manager for Windows. Your data is stored <strong>only in locations you control</strong>: your own PC, a folder or NAS you choose, and — if you enable it — your own Google Drive.</li>
-    <li><strong>The developer operates no server and receives none of your data.</strong> No account or sign-up is required to use Anneal.</li>
+    <li>Anneal comes as a desktop app for Windows and as a browser version (for iOS and other browsers, including when added to the home screen). Your data is stored <strong>only in locations you control</strong>: your own PC, your own browser, a folder or NAS you choose, and — if you enable it — your own Google Drive.</li>
+    <li><strong>The developer receives none of your data.</strong> The desktop version runs entirely on your device. The browser version alone relies on a single relay endpoint the developer operates for the key exchange with Google, but <strong>only authorization codes and tokens pass through it</strong> — never your tasks, their number, or how you use the app. No account or sign-up is required to use Anneal.</li>
     <li>There is <strong>no analytics, tracking, advertising, or crash reporting</strong> of any kind.</li>
-    <li>The only network destinations Anneal ever contacts are <strong>Google's endpoints</strong>, and only while you have Google Drive sync enabled.</li>
+    <li>The only network destinations Anneal ever contacts are <strong>Google's endpoints</strong>, and only while you have Google Drive sync enabled — plus, in the browser version only, <strong>the relay described above</strong>.</li>
   </ul>
 </div>
 
 <h2 id="en-1">1. Scope</h2>
-<p>This policy applies to the <strong>Anneal</strong> desktop task management application for Windows and to the bundled AI integration server (MCP server). Anneal is developed and published by an individual developer, referred to below as "the developer."</p>
+<p>This policy applies to the <strong>Anneal</strong> task management application (the Windows desktop version and the browser version), to the bundled AI integration server (MCP server), and to the relay endpoint used for authentication in the browser version. Anneal is developed and published by an individual developer, referred to below as "the developer."</p>
 
 <h2 id="en-2">2. Information the developer receives</h2>
 <p><strong>None.</strong></p>
-<p>Anneal runs entirely on your device. The developer operates no backend server, no database, and no analytics infrastructure. Your tasks, your usage, and your device information are never transmitted to the developer. No account creation or sign-in is required.</p>
+<p>The Anneal desktop version for Windows runs entirely on your device. The developer operates no database and no analytics infrastructure, and your tasks, your usage, and your device information are never transmitted to the developer. No account creation or sign-in is required.</p>
+<p><strong>In the browser version only, the developer operates a single relay endpoint.</strong> Google's web application clients require a <code>client_secret</code> when exchanging an authorization code for a token, and that secret cannot be placed in a browser. What passes through it, and what is not kept:</p>
+<ul>
+  <li><strong>Only authorization codes and tokens</strong> pass through it. Your tasks, their number, your usage, and your device information do not. Reads and writes to Google Drive go directly from your browser to Google.</li>
+  <li>The refresh token is <strong>kept in your own browser as an HttpOnly cookie</strong> and is not stored by the developer. The relay has no database and no storage of its own.</li>
+  <li>Authorization codes, tokens, and cookie contents are <strong>never written to logs</strong>. The hosting platform (Cloudflare) does, however, retain operational request records — timestamps, IP addresses, response status — for a limited period. Those are platform operational records; the developer does not receive your task contents through them.</li>
+</ul>
 <p>The only exception is if you choose to email the address in section 14. In that case, the contents of your message and your email address are used solely to reply to you.</p>
 
 <h2 id="en-3">3. Information the app handles</h2>
@@ -422,7 +434,7 @@ footer{margin-top:64px; padding-top:22px; border-top:1px solid var(--line); colo
 
 <footer>
   Anneal — タスク管理アプリ / desktop task manager for Windows<br>
-  © 2026 Anneal. 最終更新日 2026年8月8日 / Last updated August 8, 2026.
+  © 2026 Anneal. 最終更新日 2026年8月18日 / Last updated August 18, 2026.
 </footer>
 
 </div>
